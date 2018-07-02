@@ -18,14 +18,10 @@ class SearchRecipes extends Component {
         fetch(url, {
             method: 'GET'
         }).then(response => response.json())
-        // use this log result in console
-        // .then(json => console.log('recipes',json))
-
-        .then(json => {
-            this.props.setRecipes(json.results)
-        });
-
-    }
+          .then(json => {
+              this.props.setRecipes(json.results);
+          });
+    }   
 
     render(){
         return(
@@ -44,7 +40,7 @@ class SearchRecipes extends Component {
                 <FormGroup>
                     <ControlLabel>Dish</ControlLabel>
                     {' '}
-                    <FormControl type="text" placeholder="adobe" 
+                    <FormControl type="text" placeholder="adobo" 
                     onChange = {event => this.setState({dish: event.target.value})}
                     />
                 </FormGroup>
