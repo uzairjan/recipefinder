@@ -17,7 +17,7 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
         <Switch>
-        <Route path='/' component={App} />
+        <Route exact path='/' component={App} />
         <Route path='/favorites' component={FavoriteRecipeList} />
         </Switch>
         </BrowserRouter>
